@@ -1,0 +1,26 @@
+<html>
+<head>
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/internal_static/favicon.ico">
+    <title>Flask SQLAlchemy</title>
+</head>
+<body style="background: #ccc;">
+
+    <h3 style="border-radius: 0.8em;border: 0.2em #eee solid;color: brown;
+            text-align: center;padding: 0.2em;margin-top: 2em;font-family: Roboto, arial, sans-serif;">
+        internal blueprint route
+    </h3>
+    <div style="left:0;right:0;text-align: left;font-family: Roboto, arial, sans-serif;">
+        <div>
+            <ul>
+                {% for line in table_dump%}
+                <li>{{ line }}</li>
+                {% endfor%}
+            </ul>
+            {{ counter }} items in table
+        </div>
+    </div>
+</body>
+</html>  

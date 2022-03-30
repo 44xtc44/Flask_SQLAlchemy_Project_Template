@@ -1,0 +1,18 @@
+global-exclude *.py[cod] __pycache__ *.so
+include MANIFEST.in
+include LICENSE
+include README.md
+include requirements.txt
+include Flask_SQLAlchemy_Project_Template/__init__.py
+include Flask_SQLAlchemy_Project_Template/database.py
+include Flask_SQLAlchemy_Project_Template/models.py
+include Flask_SQLAlchemy_Project_Template/routes_internal/routes_support.py
+include Flask_SQLAlchemy_Project_Template/routes_internal/routes.py
+include Flask_SQLAlchemy_Project_Template/routes_internal/internal_static/favicon.ico
+include Flask_SQLAlchemy_Project_Template/routes_internal/internal_templates/internal_bp_content.html
+include Flask_SQLAlchemy_Project_Template/routes_user/routes_support.py
+include Flask_SQLAlchemy_Project_Template/routes_user/routes.py
+include Flask_SQLAlchemy_Project_Template/routes_user/user_static/favicon.png
+include Flask_SQLAlchemy_Project_Template/routes_user/user_static/README.md.html
+include Flask_SQLAlchemy_Project_Template/routes_user/user_templates/user_bp_content.html
+include Flask_SQLAlchemy_Project_Template/routes_user/user_templates/user_bp_index.html

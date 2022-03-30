@@ -1,0 +1,131 @@
+
+<html>
+<head>
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/user_static/favicon.png">
+    <title>Flask SQLAlchemy</title>
+</head>
+<body style="background: #ccc;">
+
+    <h1 style="border-radius: 0.8em;border: 0.2em #eee solid;color: brown;
+            text-align: center;padding: 0.2em;margin-top: 2em;font-family: Roboto, arial, sans-serif;">
+        Flask-SQLAlchemy-Project-Template
+    </h1>
+    <h3 style="border-radius: 0.8em;border: 0.2em #eee solid;color: brown;
+            text-align: center;padding: 0.2em;margin-top: 2em;font-family: Roboto, arial, sans-serif;">
+        Readme
+    </h3>
+    <div style="left:0;right:0;text-align: left;font-family: Roboto, arial, sans-serif;">
+        <div>
+            <pre>
+
+
+
+# Flask-SQLAlchemy-Project-Template
+Ready to use template to understand Flask SQLAlchemy basic implementation, with examples.
+With Flask Blueprints and application factory. Avoids circular imports.
+
+Minimalistic code and folder structure in the package.
+
+## Introduction
+
+Many tutorials on this topic are either old and non-working or complex.
+SQLAlchemy is an Object Relational Mapper (ORM). You can work with Python class attributes
+instead of raw SQL statements.
+
+## How to create the SQLite Database?
+
+Flask-SQLAlchemy can create the whole database file, tables and schema from your Python class definition.
+The SQLALCHEMY_DATABASE_URI is used to create the database in the correct location with the given name.
+
+models.py :
+
+    class Users(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        username = db.Column(db.String, unique=True, nullable=False)
+        email = db.Column(db.String, unique=True, nullable=False)
+        profile = db.Column(db.String, unique=False, nullable=False)
+
+__  init __.py  :
+
+    this_dir = path.abspath(path.join(path.dirname("__file__")))
+    db_path = path.join(this_dir, 'database.db')
+
+    def create_app():
+        ...
+        app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + db_path
+        db.init_app(app)
+        ...
+
+    def setup_database(flask_app):
+        with flask_app.app_context():
+        # alchemy creates the db from SQLALCHEMY_DATABASE_URI and models.py classes
+        db.create_all()
+
+That's it!
+
+Flask documentation says, that db.init_app(app) MUST be there, if application factory style is used.
+## important Imports
+
+
+
+database.py :
+
+    from flask_sqlalchemy import SQLAlchemy
+    db = SQLAlchemy()
+
+models.py :
+
+    from .database import db
+
+
+
+__  init __.py  :
+
+    from .database import db
+
+    def create_app():
+        # flask initializes Alchemy with the application
+        db.init_app(app)
+
+
+/routes_users/routes_support.py :
+
+	     from Flask_SQLAlchemy_Project_Template.database import db
+         from Flask_SQLAlchemy_Project_Template.models import Users
+
+
+## trip wires
+
+Install flask-sqlalchemy and python interpreter into venv via pycharm file,settings,project,interpreter if
+it will not take place via the IDE window.
+
+Circular import dilemma. Flask-SQLAlchemy is a candidate for hours of research and frustration.
+
+## tips
+
+Flask-sqlalchemy is dependent of the current context in the app. This will not show up in one file mini setups.
+For bigger Flask apps, with multiple modules, it is obviously necessary to work with route(s) and blueprints.
+This package also uses flask application factory. This is flask as a function ( def create_app(): ).
+
+
+## run
+
+    $ pip3 install Flask_SQLAlchemy_Project_Template
+    $ python3 -m Flask_SQLAlchemy_Project_Template
+
+## location
+
+    $ pip3 show Flask_SQLAlchemy_Project_Template
+
+Cheers
+
+
+
+</pre>
+        </div>
+    </div>
+</body>
+</html>
