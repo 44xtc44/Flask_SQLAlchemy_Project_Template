@@ -95,4 +95,12 @@ This package also uses flask application factory. This is flask as a function ( 
 
     $ pip3 show Flask_SQLAlchemy_Project_Template
 
+
+## GitHub package
+Just for the sake of my art. Not really useful, since you had to open the image to get the directory structure.
+
+sudo docker run -v $(pwd):/alchemy -it --network host ghcr.io/44xtc44/flask_sqlalchemy_project_template:latest 
+
+Connects your current dir with the docker image /alchemy dir. The app must write the database.
+
 Cheers
