@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 # ###############################################
 
 pack_name = "Flask_SQLAlchemy_Project_Template"
-pack_version = "1.3"
+pack_version = "1.4"
 pack_description = "Simple and ready to grow template. Understand Flask SQLAlchemy basics, with examples. Uses " \
                    "Blueprints and application factory. Avoid circular imports."
 
