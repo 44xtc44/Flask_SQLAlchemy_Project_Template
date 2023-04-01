@@ -10,8 +10,9 @@ this_dir = path.abspath(path.join(path.dirname("__file__")))
 db_path = path.join(this_dir, 'database.db')
 
 
-def create_app():
+def create_app(port=None):
     app = Flask(__name__)
+    app.config['SERVER_PORT'] = port if port else None
     app.config['DEBUG'] = False
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + db_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = "False"   # supress FSADeprecationWarning
@@ -37,4 +38,3 @@ def setup_database(flask_app):
         db.session.add(Users(username='pa', email='pa@pipapo.org', profile='chief'))
         db.session.add(Users(username='po', email='po@pipapo.org', profile='leader'))
         db.session.commit()
-

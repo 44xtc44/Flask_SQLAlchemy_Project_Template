@@ -21,13 +21,43 @@
 
     <div style="left:0;right:0;text-align: center;font-family: Roboto, arial, sans-serif;">
         <div>
-            <a href="http://localhost:5050/user" ><pre> show user table</pre></a>
+            <a href="http://localhost:{{port}}/user" ><pre> show user table</pre></a>
         </div>
         <div>
-            <a href="http://localhost:5050/internal" ><pre> show internal table</pre></a>
+            <a href="http://localhost:{{port}}/internal" ><pre> show internal table</pre></a>
         </div>
         <div>
             <a href="/user_static/README.md.html" ><pre> Readme</pre></a>
+        </div>
+
+        <div>
+
+            <form id="add_user_db_form" action="{{ url_for('user_bp.add_user_db') }}" method="post">
+
+                <input type="text"
+                        name="text_add_user_db_name"
+                        id="text_add_user_db_id"
+                        value="foo"
+                />
+                <input type="submit"
+                       value="add user name"
+                />
+            </form>
+        </div>
+
+        <div>
+            <form id="delete_user_db_form" action="{{ url_for('user_bp.delete_user_db') }}" method="post">
+
+                <input type="text"
+                        name="text_delete_user_db_name"
+                        id="text_delete_user_db_id"
+                        value="foo"
+                />
+                <input type="submit"
+                       id="submit_delete_user_db_id"
+                       value="delete user name"
+                />
+            </form>
         </div>
 
         <hr>
@@ -37,6 +67,11 @@
         </h3>
         <pre style="color: blue"> {{ db_uri }}</pre>
         <hr>
+
+
+    </div>
+</body>
+</html>
 
 
     </div>

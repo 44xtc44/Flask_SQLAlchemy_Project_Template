@@ -10,11 +10,12 @@ sys.path.append(path.abspath(this_dir))
 
 from Flask_SQLAlchemy_Project_Template import create_app, setup_database, db_path
 
+port = 5050
 if __name__ == "__main__":
-    app_factory = create_app()
+    app_factory = create_app(port=port)
     # do not kill db, if exists
     if not path.isfile(db_path):
         setup_database(app_factory)
 
     # print(app_factory.config)
-    app_factory.run(host='localhost', port=5050)
+    app_factory.run(host='localhost', port=port)
