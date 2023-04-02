@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools >= 42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Flask_SQLAlchemy_Project_Template"
+version = "0.1.5.1"
+description = "Ready to grow Flask SQLAlchemy basic template, Blueprints and application factory."
+keywords = ['Flask SQLAlchemy template', 'Flask Blueprints and application factory']
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.7"
+dynamic = ['authors',]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable"
+]
+dependencies = [
+]
+
+[project.scripts]
+
+[project.urls]
+homepage = "https://github.com/44xtc44"
+
+repository = "https://github.com/44xtc44/Flask_SQLAlchemy_Project_Template"
+
+[tool.pytest.ini_options]
+addopts = "--cov=."
+testpaths = "."
