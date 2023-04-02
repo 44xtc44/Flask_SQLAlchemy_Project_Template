@@ -7,8 +7,7 @@ name = "Flask_SQLAlchemy_Project_Template"
 version = "1.5.1"
 description = "Ready to grow Flask SQLAlchemy basic template, Blueprints and application factory."
 keywords = ['Flask SQLAlchemy template', 'Flask Blueprints and application factory']
-license = {file = "LICENSE"}
-license = [{ text = "MIT"}, {file = "LICENSE"}]
+license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.7"
 authors = [{name = "René Horn", email = "rene_horn@gmx.net" }]
