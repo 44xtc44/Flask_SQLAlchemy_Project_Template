@@ -8,11 +8,11 @@ version = "1.5.1"
 description = "Ready to grow Flask SQLAlchemy basic template, Blueprints and application factory."
 keywords = ['Flask SQLAlchemy template', 'Flask Blueprints and application factory']
 license = {file = "LICENSE"}
+license = [{ text = "MIT"}, {file = "LICENSE"}]
 readme = "README.md"
 requires-python = ">=3.7"
 authors = [{name = "René Horn", email = "rene_horn@gmx.net" }]
 classifiers = [
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
     "Development Status :: 5 - Production/Stable"
