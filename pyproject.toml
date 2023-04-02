@@ -12,6 +12,7 @@ readme = "README.md"
 requires-python = ">=3.7"
 authors = [{name = "René Horn", email = "rene_horn@gmx.net" }]
 classifiers = [
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
     "Development Status :: 5 - Production/Stable"
@@ -23,7 +24,6 @@ dependencies = [
 
 [project.urls]
 homepage = "https://github.com/44xtc44"
-
 repository = "https://github.com/44xtc44/Flask_SQLAlchemy_Project_Template"
 
 [tool.pytest.ini_options]
