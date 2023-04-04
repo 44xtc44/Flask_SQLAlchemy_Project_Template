@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Flask_SQLAlchemy_Project_Template"
-version = "1.5.1"
+version = "1.5.3"
 description = "Ready to grow Flask SQLAlchemy basic template, Blueprints and application factory."
 keywords = ['Flask SQLAlchemy template', 'Flask Blueprints and application factory']
 license = {text = "MIT"}
@@ -17,6 +17,8 @@ classifiers = [
     "Development Status :: 5 - Production/Stable"
 ]
 dependencies = [
+    "Flask==2.2.3",
+    "flask-sqlalchemy==3.0.3"
 ]
 
 [project.scripts]
