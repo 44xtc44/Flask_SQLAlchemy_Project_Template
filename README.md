@@ -10,6 +10,9 @@ Many tutorials on this topic are either old and non-working or complex.
 SQLAlchemy is an Object Relational Mapper (ORM). You can work with Python class attributes
 instead of raw SQL statements.
 
+## Example
+See the package in multi_server action as one of the [PyPi eisenmp_examples](https://pypi.org/project/eisenmp-examples/)
+
 ## How to create the SQLite Database?
 
 Flask-SQLAlchemy can create the whole database file, tables and schema from your Python class definition.
