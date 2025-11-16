@@ -86,7 +86,7 @@ Circular import dilemma. Flask-SQLAlchemy is a candidate for hours of research a
 
 Flask-sqlalchemy is dependent of the current context in the app. This will not show up in one file mini setups.
 For bigger Flask apps, with multiple modules, it is obviously necessary to work with route(s) and blueprints.
-This package also uses flask application factory. This is flask as a function ( def create_app(): ).
+This package also uses flask application factory. This is flask as a function/class method ( def create_app(): ).
 
 
 ## run
